@@ -5,16 +5,20 @@ import { MatInputModule } from '@angular/material/input';
 
 import { HomeComponent } from './home.component';
 import { OrderStringParserModule } from '../services/order-string-parser/order-string-parser.module';
+import { OrderInputComponent } from './order-input/order-input.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, OrderInputComponent],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+
     MatInputModule,
+
     OrderStringParserModule,
   ],
   exports: [HomeComponent],
+  providers: [],
 })
 export class HomeModule {}
