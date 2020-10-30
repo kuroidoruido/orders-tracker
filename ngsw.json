@@ -1,0 +1,80 @@
+{
+  "configVersion": 1,
+  "timestamp": 1604055863426,
+  "index": "/orders-tracker/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/orders-tracker/favicon.ico",
+        "/orders-tracker/index.html",
+        "/orders-tracker/main.f2e353cda7e3fffb529c.js",
+        "/orders-tracker/manifest.webmanifest",
+        "/orders-tracker/polyfills.35a5ca1855eb057f016a.js",
+        "/orders-tracker/runtime.acf0dec4155e77772545.js",
+        "/orders-tracker/styles.04274f8de38ba6ec7482.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/orders-tracker/assets/icons/icon-128x128.png",
+        "/orders-tracker/assets/icons/icon-144x144.png",
+        "/orders-tracker/assets/icons/icon-152x152.png",
+        "/orders-tracker/assets/icons/icon-192x192.png",
+        "/orders-tracker/assets/icons/icon-384x384.png",
+        "/orders-tracker/assets/icons/icon-512x512.png",
+        "/orders-tracker/assets/icons/icon-72x72.png",
+        "/orders-tracker/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/orders-tracker/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/orders-tracker/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/orders-tracker/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/orders-tracker/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/orders-tracker/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/orders-tracker/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/orders-tracker/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/orders-tracker/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/orders-tracker/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/orders-tracker/index.html": "da6c9f3e726b1caf2160e9daabb33a2dd3abd276",
+    "/orders-tracker/main.f2e353cda7e3fffb529c.js": "e0142f0644629df1fba2c98e6e8a343662936963",
+    "/orders-tracker/manifest.webmanifest": "dc3d6721303803435a54f059c161a0388fde9de7",
+    "/orders-tracker/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
+    "/orders-tracker/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/orders-tracker/styles.04274f8de38ba6ec7482.css": "7cce09a5e31695a6de5d219f07cb19d48d825c5b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
