@@ -1,0 +1,5 @@
+<mat-list>
+    <ng-container *ngFor="let order of orders$ | async">
+        <mat-list-item><app-order [order]="order"></app-order></mat-list-item>
+    </ng-container>
+</mat-list>

@@ -1,0 +1,9 @@
+.container {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+
+    .infos {
+        padding-left: 0.5rem;
+    }
+}

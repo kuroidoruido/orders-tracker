@@ -1,0 +1,17 @@
+<ng-container [ngSwitch]="status">
+    <ng-template [ngSwitchCase]="'OPEN'">
+        <mat-icon aria-hidden="false" aria-label="Open">shopping_bag</mat-icon>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'SHIPPED'">
+        <mat-icon aria-hidden="false" aria-label="Shipped">flight</mat-icon>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'RECEIVED'">
+        <mat-icon aria-hidden="false" aria-label="Received">home</mat-icon>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'LOST'">
+        <mat-icon aria-hidden="false" aria-label="Lost">wrong_location</mat-icon>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'CANCELED'">
+        <mat-icon aria-hidden="false" aria-label="Lost">cancel</mat-icon>
+    </ng-template>
+</ng-container>

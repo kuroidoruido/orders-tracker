@@ -1,0 +1,6 @@
+<ng-template [ngIf]="order">
+    <div class="container">
+        <app-status-icon [status]="order.status"></app-status-icon>
+        <div class="infos" [innerHTML]="order | order"></div>
+    </div>
+</ng-template>

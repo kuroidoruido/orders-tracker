@@ -1,0 +1,88 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Add an order
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <form [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Type</mat-label>
+            <mat-select formControlName="type">
+                <mat-option value="ORDER">
+                    Order
+                </mat-option>
+                <mat-option value="PRE-ORDER">
+                    Pre-order
+                </mat-option>
+                <mat-option value="CROWDFOUNDING">
+                    Crowdfounding
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Place on</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="placedOnDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Shop</mat-label>
+            <input matInput formControlName="shop">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Label</mat-label>
+            <input matInput formControlName="label">
+        </mat-form-field>
+        <div class="expected-received-date">
+            <mat-form-field>
+                <mat-select formControlName="type" formControlName="receivedDateType">
+                    <mat-option value="DATE">
+                        Date
+                    </mat-option>
+                    <mat-option value="RANGE">
+                        Range
+                    </mat-option>
+                    <mat-option value="MONTH">
+                        Month
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <ng-template [ngIf]="form.controls.receivedDateType.value === 'DATE'">
+                <mat-form-field>
+                    <mat-label>Expected on</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="receivedDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </ng-template>
+            <ng-template [ngIf]="form.controls.receivedDateType.value === 'RANGE'">
+                <mat-form-field>
+                    <mat-label>Expected between</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                    <input matStartDate formControlName="receivedFromDate" placeholder="Start date">
+                    <input matEndDate formControlName="receivedToDate" placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                
+                    <mat-error *ngIf="form.controls.receivedFromDate.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+                    <mat-error *ngIf="form.controls.receivedToDate.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+                </mat-form-field>
+            </ng-template>
+            <ng-template [ngIf]="form.controls.receivedDateType.value === 'MONTH'">
+                <mat-form-field>
+                    <mat-label>Expected on month</mat-label>
+                    <input matInput [matDatepicker]="dp" formControlName="receivedDate">
+                    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                    <mat-datepicker #dp
+                                    startView="multi-year"
+                                    (yearSelected)="chosenYearHandler($event)"
+                                    (monthSelected)="chosenMonthHandler($event, dp)"
+                                    panelClass="example-month-picker">
+                    </mat-datepicker>
+                </mat-form-field>
+            </ng-template>
+        </div>
+        <button mat-button (click)="save()">Add</button>
+    </form>
+  </mat-expansion-panel>
